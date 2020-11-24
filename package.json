@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node server.js"
+    "start-server": "nodemon server.js",
+    "start-mongo": "mongod --dbpath=/Users/Avan/data/db",
+    "start": "concurrently \" npm run start-mongo \" \" npm run start-server \" "
   },
   "dependencies": {
     "cookie-parser": "^1.4.5",
@@ -11,6 +13,7 @@
     "ejs": "^2.6.2",
     "express": "^4.16.4",
     "http-errors": "^1.6.3",
+    "mongoose": "^5.10.15",
     "morgan": "^1.9.1",
     "path": "^0.12.7",
     "routes": "^2.1.0",
