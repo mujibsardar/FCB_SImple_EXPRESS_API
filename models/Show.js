@@ -13,8 +13,7 @@ const Schema = mongoose.Schema;
 const ShowSchema = new Schema({
   id: {
     type: String,
-    required: true,
-    text: true
+    required: true
   },
   title: {
     type: String,

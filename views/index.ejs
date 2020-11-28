@@ -7,5 +7,13 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <ul>
+      <% shows.map(function(show){ %>
+        <li>
+          <h3><%= show.title %></h3>
+          <img src="<%= show.image %>" alt="<%= show.title %>" width=300 height=300>
+        </li>
+      <% }); %>
+    </ul>
   </body>
 </html>
